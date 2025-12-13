@@ -1,3 +1,7 @@
+/* ================================
+   BASE STYLES
+   ================================ */
+
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -6,7 +10,6 @@ html, body {
   background-color: #FFFDEF;
   overflow-x: hidden;
 }
-
 
 .main-content-wrapper {
   width: 100%;
@@ -19,12 +22,13 @@ html, body {
   background-color: #FFFDEF;
 }
 
-/* --- ADDED: Padding for Main Content to clear the fixed navbar --- */
 .main-content-padding {
-    /* Must be larger than the custom-navbar height (approx 125px) */
-    padding-top: 130px; 
+  padding-top: 130px;
 }
 
+/* ================================
+   HERO SECTION
+   ================================ */
 
 .hero {
   display: flex;
@@ -35,77 +39,122 @@ html, body {
   background-color: #FFFDEF;
 }
 
-
-
-.heading1{
+.heading1 {
   color: #FD6B00;
-font-family: "Cabinet Grotesk Variable";
-font-size: 7.5rem;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-text-align: center;
-
+  font-family: "Cabinet Grotesk Variable", sans-serif;
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
 }
 
-.heading2{
-color: #5D43F7;
-font-family: "PP Right Sans";
-font-size: 6.25rem;
-font-style: italic;
-font-weight: 500;
-line-height: normal;
-text-align: left;   
+.heading2 {
+  color: #5D43F7;
+  font-family: "PP Right Sans", sans-serif;
+  font-size: 6.25rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
 }
 
-p{
+/* Force left alignment for all section headings */
+.container .heading2,
+.AreasofInterest .heading2 {
+  text-align: left;
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+p {
   color: #000;
-font-family: Avenir;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 36px */
+  font-family: Avenir, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
-.container{
+h4 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* ================================
+   CONTAINERS & SPACING
+   ================================ */
+
+.container {
   margin-top: 6em;
   margin-bottom: 6em;
 }
 
-.scontainer{
+.scontainer {
   margin-top: 2em;
   margin-bottom: 5em;
 }
 
-.listofint{
+hr {
+  height: 1px;
+  background-color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+/* ================================
+   LISTS
+   ================================ */
+
+.listofint {
   color: #000;
-font-family: Avenir;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 350;
-line-height: 200%; /* 48px */
-
+  font-family: Avenir, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 200%;
 }
 
-hr{
-height: 1px;
-background-color: #000000;
-display: block;
-margin-left: auto;
-margin-right: auto;
-
+.listofintsub {
+  color: #000;
+  font-family: Avenir, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 200%;
 }
 
-footer{
-display: flex;
-width: 100%;
-height: 15em;
-align-items: center;
-color: #FFFDEF;
-background-color: #1E1E1E;
-justify-content: center;
+.listofnone {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: #000;
+  font-family: Avenir, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 200%;
 }
 
+.subheading {
+  color: #000;
+  font-family: Avenir, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 200%;
+  text-decoration-line: underline;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
 
 .button {
   position: relative;
@@ -113,16 +162,13 @@ justify-content: center;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 1rem;
   padding-inline: 1.5rem;
-  background-color:#FD6B00;
+  background-color: #FD6B00;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
-  color: #ffff; 
-  text-decoration: none; 
-  
+  color: #ffff;
+  text-decoration: none;
   gap: 10px;
   font-weight: bold;
   border: 3px solid #ffffff4d;
@@ -135,16 +181,15 @@ justify-content: center;
 .icon {
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
   transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
   transform: scale(1.05);
   border-color: #fff9;
-  
-  
-  color: #ffff;       
-  text-decoration: none;  
+  color: #ffff;
+  text-decoration: none;
 }
 
 .button:hover .icon {
@@ -175,143 +220,133 @@ justify-content: center;
   0% {
     left: -100px;
   }
-
   60% {
     left: 100%;
   }
-
   to {
     left: 100%;
   }
 }
 
 .button-container {
-  display: flex; 
-  gap: 2em; 
-  margin-top: 3.3em;    
-}
-
-.subheading{
-  color: #000;
-font-family: Avenir;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 800;
-line-height: 200%; 
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: auto;
-text-decoration-thickness: auto;
-text-underline-offset: auto;
-text-underline-position: from-font;
-}
-
-.listofnone {
-  list-style: none;        
-  padding: 0;              
-  margin: 0;
-  text-align: left;       
-  color: #000;
-  font-family: Avenir, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 200%;
-}
-
-
-.orgbox{
-  margin-top: 3.25em;
-  margin-bottom: 3.25em;
   display: flex;
-width: 75em;
-flex-direction: column;
-align-items: flex-start;
-gap: 2em;
+  gap: 2em;
+  margin-top: 3.3em;
+  flex-wrap: wrap;
 }
 
-.qbox{
-  display: flex;
-width:100%;
-height: 20em;
-padding: 3em 5em;
-align-items: center;
-gap: 5em;
-border-radius: 1.25em;
-background-color: #FFF;
-border: #000;
+/* ================================
+   TEXT COLORS
+   ================================ */
 
-}
-
-.orgimg{
-display: flex;
-width: 367.388px;
-height: 114px;
-padding: 20px 40px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 20px;
-background: #ffff;
-}
-
-.orgimgcontainer{
-  display: inline-flex;
-align-items: center;
-gap: 48px;
-
-}
-
-.qboxcontent{
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-gap: 24px;
-}
-
-.qboximg{
- width: 325px;
-height: 223px;
-flex-shrink: 0;
-aspect-ratio: 325/223;
-}
-
-h4{
-font-size: 32px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-
-.redd{
+.redd {
   color: #FD6B00;
   display: inline;
   font-weight: 700;
-
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
-.blued{
+.blued {
   display: inline;
   color: #5D43F7;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; 
-
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
 }
-
-.dates-section {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-
 
 /* ================================
-   Custom Navbar Styles
+   ORGANIZERS SECTION
+   ================================ */
+
+.orgbox {
+  margin-top: 3.25em;
+  margin-bottom: 3.25em;
+  display: flex;
+  width: 100%;
+  max-width: 75em;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.orgimgcontainer {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.orgimg {
+  display: flex;
+  width: 367.388px;
+  max-width: 100%;
+  height: 114px;
+  padding: 20px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  background: #ffff;
+  object-fit: contain;
+}
+
+.qbox {
+  display: flex;
+  width: 100%;
+  min-height: 20em;
+  padding: 3em 5em;
+  align-items: center;
+  gap: 5em;
+  border-radius: 1.25em;
+  background-color: #FFF;
+  border: 1px solid #e5e5e5;
+}
+
+.qboxcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1;
+}
+
+.timg {
+  flex-shrink: 0;
+}
+
+.qboximg {
+  width: 325px;
+  height: 223px;
+  max-width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 325/223;
+  object-fit: cover;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  display: flex;
+  width: 100%;
+  min-height: 15em;
+  align-items: center;
+  color: #FFFDEF;
+  background-color: #1E1E1E;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+}
+
+/* ================================
+   NAVBAR STYLES
    ================================ */
 
 .custom-navbar {
@@ -325,56 +360,45 @@ line-height: 150%;
   transition: box-shadow 0.3s ease;
 }
 
-/* Shadow on scroll */
 .shadow-md-custom {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
               0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar inner container aligned with page layout */
 .custom-nav-container {
   max-width: 100%;
   margin: 0 auto;
   padding-left: 7.5em;
   padding-right: 7.5em;
   height: 100px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo + Title */
 .nav-logo-title {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 16px;
 }
 
-/* Logo wrapper */
 .logo-img-container {
   width: 100px;
   height: 100px;
   flex-shrink: 0;
 }
 
-/* Logo image */
 .logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* Title text */
 .nav-title {
   font-size: 24px;
   margin: 0;
   white-space: nowrap;
 }
-
-/* ================================
-   Desktop Navigation
-   ================================ */
 
 .nav-desktop-links {
   display: flex;
@@ -397,10 +421,6 @@ line-height: 150%;
   color: #fd6b00;
 }
 
-/* ================================
-   Mobile Menu Button
-   ================================ */
-
 .mobile-menu-btn {
   padding: 8px;
   border-radius: 8px;
@@ -412,10 +432,6 @@ line-height: 150%;
 .mobile-menu-btn:hover {
   background-color: #f7f7f7;
 }
-
-/* ================================
-   Mobile Menu Dropdown
-   ================================ */
 
 .mobile-menu-dropdown {
   border-top: 1px solid #e5e5e5;
@@ -438,33 +454,155 @@ line-height: 150%;
   cursor: pointer;
   width: 100%;
   transition: color 0.3s ease;
+  color: inherit;
 }
 
 .mobile-nav-link:hover {
   color: #fd6b00;
 }
 
-/* ================================
-   Bottom Divider
-   ================================ */
-
 .nav-divider {
   border-bottom: 1px solid #6a6a6a;
 }
 
 /* ================================
-   Main Content Offset (Fixed Navbar)
+   RESPONSIVE BREAKPOINTS
    ================================ */
 
-.main-content-padding {
-  padding-top: 130px;
+/* Large Tablets & Small Desktops (992px - 1200px) */
+@media (max-width: 1200px) {
+  .main-content-wrapper {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  .custom-nav-container {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  .mobile-menu-links {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  .heading1 {
+    font-size: 5.5rem;
+  }
+
+  .heading2 {
+    font-size: 4.5rem;
+  }
+
+  .orgbox {
+    max-width: 100%;
+  }
+
+  .qbox {
+    padding: 2.5em 3em;
+    gap: 3em;
+  }
 }
 
-/* ================================
-   Responsive Adjustments
-   ================================ */
-
+/* Tablets (768px - 992px) */
 @media (max-width: 992px) {
+  .main-content-wrapper {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .custom-nav-container {
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 80px;
+  }
+
+  .mobile-menu-links {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .logo-img-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nav-title {
+    font-size: 18px;
+  }
+
+  .main-content-padding {
+    padding-top: 100px;
+  }
+
+  .heading1 {
+    font-size: 4rem;
+  }
+
+  .heading2 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .listofint,
+  .listofintsub {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+
+  .qbox {
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+    height: auto;
+  }
+
+  .qboximg {
+    width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  .orgimgcontainer {
+    gap: 24px;
+  }
+
+  .orgimg {
+    width: 280px;
+  }
+}
+
+/* Mobile Landscape & Small Tablets (576px - 768px) */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
   .custom-nav-container {
     padding-left: 1.5em;
     padding-right: 1.5em;
@@ -473,5 +611,272 @@ line-height: 150%;
   .mobile-menu-links {
     padding-left: 1.5em;
     padding-right: 1.5em;
+  }
+
+  .heading1 {
+    font-size: 3rem;
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .listofint,
+  .listofintsub {
+    font-size: 1.1rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .scontainer {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding-block: 0.875rem;
+    padding-inline: 1.25rem;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .blued {
+    font-size: 28px;
+  }
+
+  .listofnone {
+    font-size: 18px;
+  }
+
+  .qbox {
+    padding: 1.5em;
+    gap: 1.5em;
+  }
+
+  .orgbox {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .orgimgcontainer {
+    gap: 16px;
+  }
+
+  .orgimg {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    min-height: 10em;
+    padding: 1.5em;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Portrait (up to 576px) */
+@media (max-width: 576px) {
+  .main-content-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .custom-nav-container {
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 70px;
+  }
+
+  .mobile-menu-links {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .logo-img-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-logo-title {
+    gap: 8px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+  }
+
+  .main-content-padding {
+    padding-top: 90px;
+  }
+
+  .hero {
+    gap: 0.5em;
+  }
+
+  .heading1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .heading2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .listofint,
+  .listofintsub {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .scontainer {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+  }
+
+  .button-container {
+    margin-top: 2em;
+    gap: 1em;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .blued {
+    font-size: 24px;
+  }
+
+  .redd {
+    font-size: inherit;
+  }
+
+  .listofnone {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .qbox {
+    padding: 1.25em;
+    gap: 1.25em;
+  }
+
+  .qboxcontent {
+    gap: 16px;
+  }
+
+  .orgbox {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    gap: 1.5em;
+  }
+
+  .orgimgcontainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .orgimg {
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+  }
+
+  footer {
+    min-height: 8em;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Devices (up to 400px) */
+@media (max-width: 400px) {
+  .heading1 {
+    font-size: 1.75rem;
+  }
+
+  .heading2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-title {
+    font-size: 12px;
+  }
+
+  .logo-img-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .button {
+    font-size: 0.85rem;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .blued {
+    font-size: 20px;
+  }
+}
+
+/* Carousel Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-inner {
+    border-radius: 8px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-indicators button {
+    width: 8px;
+    height: 8px;
   }
 }
