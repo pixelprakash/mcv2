@@ -21,35 +21,42 @@ function App() {
 
   return (
     <>
-    <div className="navb">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> 6th Mobile Congress Studies </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">Navbar</a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Features</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Pricing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <li className="nav-item">
+          <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-</div>
 
 
+   <main>
    <div className="main-content-wrapper">
       <div className="hero">
         <h1 className="heading1"> Aug 21-22, 2026 </h1>
@@ -59,6 +66,7 @@ function App() {
 
       <p className='scontainer'>The 6th Mobile Studies Congress invites researchers, creative practitioners, designers and industry professionals to submit papers and proposals for presentations, workshops, screening, showcases and panel discussions on the theme ”Go Mobile, Stay Connected.” This annual event seeks to examine the transformative impact of mobile media, cellphilming and smart technologies on our lives, society and creative industries. This congress will explore new ways to connect to culture, country and communities. The 6th Mobile Studies Congress will include a Mobile Innovation Networks and Association, MINA, smartphone film festival screening. Selected conference papers and projects will be published in a special issue. </p>
       
+      <div className="bootstrap-scope">
       <div className="curosil">
 
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -114,6 +122,7 @@ function App() {
           </button>
 
         </div>
+      </div>
       </div>
 
       <div className="AreasofInterest container"> 
@@ -191,7 +200,12 @@ function App() {
         </ol> 
 
       <div class="button-container">
-<button class="button">
+<a 
+  class="button" 
+  href="https://forms.cloud.microsoft/r/RhZq0aqFX0" 
+  target="_blank"  
+  rel="noopener noreferrer" 
+>
   Submit Abstract
   <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
     <path
@@ -200,9 +214,14 @@ function App() {
       clip-rule="evenodd"
     ></path>
   </svg>
-</button>
+</a>
 
-<button class="button">
+<a 
+  class="button" 
+  href="https://filmfreeway.com/mina" 
+  target="_blank"  
+  rel="noopener noreferrer" 
+>
   Submit Mobile story /Cellphilm /Smartphone film
   <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
     <path
@@ -211,7 +230,8 @@ function App() {
       clip-rule="evenodd"
     ></path>
   </svg>
-</button>
+</a>
+
       </div>
         
        </div>  
@@ -219,13 +239,16 @@ function App() {
 
 
       <div className="container">
-        <h2 className="heading2"> Important Dates </h2>  
-        <hr></hr> 
-        <p>Abstract Submission Deadline:  1st March, 2026</p>
-        <hr></hr> 
-        <p>Notification of Acceptance:   1st April, 2026</p>
-        <hr></hr>
-        <p>Join us for this dynamic gathering at the Indian Institute of Technology Hyderabad, where thought leaders from around the globe will share insights, research, and innovations in mobile studies, mobile creative practice and cellphilms. Let us come together to shape the future of mobile connectivity, creativity and collaboration.</p>
+        <h2 className="heading2"> Important Dates </h2> 
+
+        <div className="dates-section">
+         <hr></hr> 
+         <p>Abstract Submission Deadline: <p className='redd'>1st March, 2026</p> </p>
+         <hr></hr> 
+         <p>Notification of Acceptance: 1st April, 2026</p>
+         <hr></hr>
+        </div>
+        <p> <p className='blued'> Join us </p> for this dynamic gathering at the Indian Institute of Technology Hyderabad, where thought leaders from around the globe will share insights, research, and innovations in mobile studies, mobile creative practice and cellphilms. Let us come together to shape the future of mobile connectivity, creativity and collaboration.</p>
 
       </div>  
       <hr></hr>  
@@ -247,9 +270,9 @@ function App() {
           <div class="qboxcontent">
           <h4>For more information, please contact us at</h4>
           <p>xiaogexu@zwu.edu.cn, MSchleser@swin.edu.au </p>
-          <button class="button">
+          <a class="button" href="mailto:xiaogexu@zwu.edu.cn">
           contact
-          </button>
+          </a>
           </div>
 
           <div className="timg">
@@ -281,8 +304,8 @@ function App() {
 
         
       </div>  
-      <hr></hr>  
     </div>
+    </main>
 
     <footer>
        © 2025 Mobile Studies Congress. All rights reserved. 
