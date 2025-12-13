@@ -12,8 +12,8 @@ html, body {
   width: 100%;
   padding-left: 7.5em;
   padding-right: 7.5em;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFDEF;
@@ -309,141 +309,168 @@ line-height: 150%;
 
 
 
-/* --- Custom Navbar Styles --- */
+/* ================================
+   Custom Navbar Styles
+   ================================ */
 
 .custom-navbar {
-    width: 100%;
-    /* Background color */
-    background-color: #fffdef; 
-    z-index: 1050; 
-    transition: box-shadow 0.3s ease; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fffdef;
+  z-index: 1050;
+  transition: box-shadow 0.3s ease;
 }
 
-
+/* Shadow on scroll */
 .shadow-md-custom {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar inner container aligned with page layout */
 .custom-nav-container {
-    
-    padding-left: 0; 
-    
-    padding-right: 7.5em;
-    height: 6.25em;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px; 
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-
+/* Logo + Title */
 .nav-logo-title {
-    display: flex;
-    align-items: center;
-    gap: 16px; 
-
-    margin-left: -7.5em; 
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
+/* Logo wrapper */
 .logo-img-container {
-   width: 120px;
-   height: 80px;
-   aspect-ratio: 31/23;
-   /* Padding and margin removed here to ensure only the negative margin on the parent takes effect */
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
 }
 
+/* Logo image */
 .logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+/* Title text */
 .nav-title {
-    font-size: 24px;
-    margin: 0;
-    
-    /* --- KEY CHANGE: Positive Margin for text alignment --- */
-    /* This pushes the text back into alignment with the page's 7.5em margin */
-    margin-left: 7.5em;
+  font-size: 24px;
+  margin: 0;
+  white-space: nowrap;
 }
 
-/* Desktop Links (No changes needed here) */
+/* ================================
+   Desktop Navigation
+   ================================ */
+
 .nav-desktop-links {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 20px;
 }
 
 .nav-link-custom {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: inherit;
-    transition: color 0.3s;
-    font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 20px;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
 .nav-link-custom:hover {
-    color: #fd6b00; 
+  color: #fd6b00;
 }
 
-/* Mobile Menu Button */
+/* ================================
+   Mobile Menu Button
+   ================================ */
+
 .mobile-menu-btn {
-    padding: 8px;
-    transition: background-color 0.15s;
-    border-radius: 8px;
-    border: none;
-}
-.mobile-menu-btn:hover {
-    background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  transition: background-color 0.15s ease;
 }
 
-/* Mobile Menu Dropdown */
+.mobile-menu-btn:hover {
+  background-color: #f7f7f7;
+}
+
+/* ================================
+   Mobile Menu Dropdown
+   ================================ */
+
 .mobile-menu-dropdown {
-    padding-bottom: 16px;
-    border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fffdef;
 }
 
 .mobile-menu-links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 16px;
-    /* Must still apply padding to the links so they align with the desktop links */
-    padding-left: 7.5em; 
-    padding-right: 7.5em;
-    font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 7.5em;
+  font-size: 18px;
 }
 
 .mobile-nav-link {
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px 0;
-    color: inherit;
-    transition: color 0.3s;
-    width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: color 0.3s ease;
 }
 
 .mobile-nav-link:hover {
-    color: #fd6b00;
+  color: #fd6b00;
 }
 
-/* Bottom Divider */
+/* ================================
+   Bottom Divider
+   ================================ */
+
 .nav-divider {
-    border-bottom: 1px solid #6A6A6A;
+  border-bottom: 1px solid #6a6a6a;
 }
 
-/* --- Essential padding for main content (No change needed) --- */
+/* ================================
+   Main Content Offset (Fixed Navbar)
+   ================================ */
+
 .main-content-padding {
-    padding-top: 130px; 
+  padding-top: 130px;
+}
+
+/* ================================
+   Responsive Adjustments
+   ================================ */
+
+@media (max-width: 992px) {
+  .custom-nav-container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .mobile-menu-links {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
 }
