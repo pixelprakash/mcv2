@@ -64,15 +64,16 @@ function App() {
         <div className="container-fluid custom-nav-container">
           
           {/* Logo and Title */}
-          <div className="nav-logo-title">
+          
             <div className="logo-img-container">
               <img alt="MSI Logo" className="logo-img" src={imgMsiLogoBlack3} />
             </div>
-            <h1 className="nav-title d-none d-sm-block">
-              6<sup className="text-15">th</sup> Mobile Studies Congress
-            </h1>
-          </div>
 
+           {/* <h1 className="nav-title d-none d-sm-block">
+              6<sup className="text-15">th</sup> Mobile Studies Congress
+            </h1> */}
+
+          
           {/* Desktop Navigation Links */}
           <div className="d-none d-lg-flex nav-desktop-links">
             <button onClick={() => scrollToSection('format-section')} className="nav-link-custom">
@@ -133,11 +134,11 @@ function App() {
         <div className="main-content-wrapper">
           <div className="hero">
             <h1 className="heading1"> Aug 21-22, 2026 </h1>
-            <h2 className="heading2"> Go Mobile, Stay Connected </h2>
+            <h1 className="heading2"> Go Mobile, Stay Connected </h1>
             <h1 className="heading1"> Venue: IIT Hyderabad </h1>
           </div>
 
-          <p className='scontainer'>The 6th Mobile Studies Congress invites researchers, creative practitioners, designers and industry professionals to submit papers and proposals for presentations, workshops, screening, showcases and panel discussions on the theme ”Go Mobile, Stay Connected.” This annual event seeks to examine the transformative impact of mobile media, cellphilming and smart technologies on our lives, society and creative industries. This congress will explore new ways to connect to culture, country and communities. The 6th Mobile Studies Congress will include a Mobile Innovation Networks and Association, MINA, smartphone film festival screening. Selected conference papers and projects will be published in a special issue. </p>
+          <p className='scontainer'>The 6th Mobile Studies Congress invites researchers, creative practitioners, designers, filmmakers and industry professionals to submit papers and proposals for presentations, workshops, screening, showcases and panel discussions on the theme ”Go Mobile, Stay Connected.” This annual event seeks to examine the transformative impact of mobile media, cellphilming and smart technologies on our lives, society and creative industries. This congress will explore new ways to connect to culture, country and communities. The 6th Mobile Studies Congress will include a Mobile Innovation Networks and Association, MINA, smartphone film festival screening. Selected conference papers and projects will be published in a special issue. </p>
           
           <div className="bootstrap-scope">
             <div className="curosil">
@@ -287,7 +288,7 @@ function App() {
                 target="_blank"  
                 rel="noopener noreferrer" 
               >
-                Submit Mobile story /Cellphilm /Smartphone film
+                Submit Mobile story / Cellphilm / Smartphone film
                 <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     fillRule="evenodd"
@@ -344,6 +345,7 @@ function App() {
             <ul className="listofnone">
               <li>Anna Chiara Sabatino, University of Salerno, Italy</li>
               <li>Cati Alice, Università Cattolica del Sacro Cuore, Italy</li>
+              <li>Laurent Antonczak, University of Strasbourg, France</li>
               <li>Claudia A Mitchell, McGill University, Canada</li>
               <li>Dafydd Sills-jones, Auckland University of Technology, New Zealand/Aotearoa</li>
               <li>Deepak John Mathew, Indian Institute of Technology Hyderabad, India</li>
